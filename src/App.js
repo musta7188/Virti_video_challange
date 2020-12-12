@@ -9,14 +9,12 @@ import Image3 from "./images/Image3";
 function App() {
 
   return (
-
       <div className="main_container">
         <Image3/>
         <Image2/>
         <Image1/>
         <Video/>
       </div>
-  
   );
 }
 

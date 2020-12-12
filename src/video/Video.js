@@ -5,24 +5,22 @@ import ReactPlayer from "react-player";
 
 function Video({setPlaying, stopPlaying, showImageOne, showImageTwo, showImageThree}) {
  
-  const handelProgress = ({played}) =>{
-
-      const time = parseFloat((played * 10).toFixed(4))
-      showImageOne( Math.floor(time*2)/2)
+  const handelProgress = (element) =>{
+      const time = element.nativeEvent.path[0].currentTime
+      showImageOne(time)
 
   }
 
   return (
-    <div className="'player-wrapper">
-      <ReactPlayer
-        className="react-player"
-        url={video}
-        controls={true}
-        onPlay={() => setPlaying()}
-        onEnded={() => stopPlaying()}
-        onProgress={handelProgress}
-      />
-      </div>
+    <>
+      <video src={video}
+        controls
+              onPlay={() => setPlaying()}
+              onEnded={() => stopPlaying()}
+              onTimeUpdate={handelProgress}      
+          />
+      <button className="button"> Fullscreen mode</button>
+      </>
   );
 }
 

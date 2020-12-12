@@ -4,7 +4,7 @@
   right: 0;
   bottom: 0;
   height: 840px;
-  padding: 4px;
+  padding: 7px;
   background: #8a2be2;
   border: 3px solid;
   position: relative;
@@ -25,14 +25,14 @@ position: absolute ;
   z-index: 1;
 }
 
-
-.player-wrapper {
-  position: relative;
-  padding-top: 56.25%;
+video{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 30%;
+  right: 30%;
 }
 
-.react-player {
-  position: absolute;
-  top: 30%;
-  left: 30%;
+@media only screen and (max-width: 375px) {
+  
 }
