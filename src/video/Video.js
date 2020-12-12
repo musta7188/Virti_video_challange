@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
 import video from "./Big_Buck_Bunny_1080_10s_5MB.mp4";
+import { connect } from "react-redux";
 import ReactPlayer from "react-player";
-export default function Video() {
+
+function Video({setPlaying, stopPlaying}) {
+ 
+ 
   const player = React.createRef();
-
-  const [completedWatch, setCompletedWatch] = useState(false)
-
-  const handleTimePlayed = ({played}) =>{
-
-      console.log( (played * 10).toFixed(4) < 3.500)
-    
-  }
 
   return (
     <div className="'player-wrapper">
@@ -20,8 +16,18 @@ export default function Video() {
         ref={player}
         autoplay
         controls={true}
-        onProgress={handleTimePlayed}
+        onPlay={() => setPlaying()}
+        onEnded={() => stopPlaying()}
       />
       </div>
   );
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setPlaying: () => dispatch({ type: "VIDEO_PLAY"}),
+    stopPlaying: () => dispatch({ type: "VIDEO_STOP"})
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Video);
