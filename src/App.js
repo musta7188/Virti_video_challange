@@ -1,14 +1,15 @@
-import './App.css';
-import Video from './video/Video'
-
+import "./App.css";
+import Video from "./video/Video";
+import Image1 from './images/Image1'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Video/>
-      </header>
-    </div>
+
+      <div className="main_container">
+        <Image1/>
+        <Video />
+      </div>
+  
   );
 }
 
