@@ -1,5 +1,5 @@
 import "./App.css";
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import Video from "./video/Video";
 import Image1 from './images/Image1'
 

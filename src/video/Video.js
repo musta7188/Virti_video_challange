@@ -5,16 +5,12 @@ import ReactPlayer from "react-player";
 
 function Video({setPlaying, stopPlaying}) {
  
- 
-  const player = React.createRef();
 
   return (
     <div className="'player-wrapper">
       <ReactPlayer
         className="react-player"
         url={video}
-        ref={player}
-        autoplay
         controls={true}
         onPlay={() => setPlaying()}
         onEnded={() => stopPlaying()}

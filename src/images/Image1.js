@@ -5,21 +5,27 @@ import { connect } from "react-redux";
 
 function Image1({timeVideoPlayed, videoPlay}) {
 
-  const [play, setPlay] = useState(false)
+  const [showImage, setShowImage] = useState(false)
 
-useEffect(() =>{
-  if(timeVideoPlayed < 2 && videoPlay){
-    setTimeout(() =>{
+  useEffect(() =>{
+    if(videoPlay && timeVideoPlayed < 2){
 
-    })
-  }
-})
+      setTimeout(( ) =>{
+        setShowImage(true)
+      }, 3500)
+
+      setTimeout(( ) =>{
+        setShowImage(false)
+      }, 8500)
+    
+    }
+  })
+
   
-
   return (
     <>
-     {play? <Image1/> : "" }
-      </>
+    {showImage ? <img src={image1}/> : ""}
+    </>
   )
 }
 
