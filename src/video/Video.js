@@ -8,7 +8,7 @@ function Video({setPlaying, stopPlaying, showImageOne, showImageTwo, showImageTh
   const handelProgress = ({played}) =>{
 
       const time = parseFloat((played * 10).toFixed(4))
-      showImageOne( Math.round(time*2)/2)
+      showImageOne( Math.floor(time*2)/2)
 
   }
 
