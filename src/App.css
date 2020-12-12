@@ -10,10 +10,20 @@
   position: relative;
 }
 
-.image1{
+.image_1{
 position: absolute ;
-
 }
+
+.image_2{
+  position: absolute;
+  right: 0;
+}
+
+.image_3{
+  position: absolute;
+  left: 45%;
+}
+
 
 .player-wrapper {
   position: relative;

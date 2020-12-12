@@ -1,38 +1,22 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import image1 from "./image1.png"
 import { connect } from "react-redux";
 
 
-function Image1({timeVideoPlayed, videoPlay}) {
-
-  const [showImage, setShowImage] = useState(false)
-
-  useEffect(() =>{
-    if(videoPlay && timeVideoPlayed < 2){
-
-      setTimeout(( ) =>{
-        setShowImage(true)
-      }, 3500)
-
-      setTimeout(( ) =>{
-        setShowImage(false)
-      }, 8500)
-    
-    }
-  })
-
+function Image1({timeVideoPlayed, videoPlay , showImage1}) {
   
   return (
-    <>
-    {showImage ? <img src={image1}/> : ""}
-    </>
+    <div className="image_1">
+    {timeVideoPlayed < 2 && videoPlay && showImage1 ? <img src={image1}/> : ""}
+    </div>
   )
 }
 
 const mapStateToProps = (state) => {
   return {
     timeVideoPlayed: state.timeVideoPlayed,
-    videoPlay: state.videoPlay
+    videoPlay: state.videoPlay,
+    showImage1: state.showImage1
   };
 };
 
