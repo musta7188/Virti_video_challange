@@ -1,9 +1,7 @@
 const initialState = {
   timeVideoPlayed: 0,
   videoPlay: false,
-  showImage1: false,
-  showImage2: false,
-  showImage3: false,
+  VideoTime: 0,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -23,19 +21,13 @@ const appReducer = (state = initialState, action) => {
       }
   }
 
-  if(action.type ===  "SHOW_IMAGE_ONE"){
+  if(action.type ===  "VIDEO_TIMESTAMP"){
     return{
       ...state,
-      showImage1: action.payload.currentState
+      VideoTime: action.payload.currentState
     }
   }
 
-  if(action.type ===  "SHOW_IMAGE_TWO"){
-    return{
-      ...state,
-      showImage2: action.payload.currentState
-    }
-  }
 
 
   return state;
