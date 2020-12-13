@@ -23,11 +23,11 @@ function Image3({ timeVideoPlayed, videoPlay, VideoTime }) {
       VideoTime >= 7.0 &&
       VideoTime <= 8.5 ? (
         <RenderImage
-        animation={animation}
-        transition={transition}
-        imageNumber={3}
-        image={image3}
-      />
+          animation={animation}
+          transition={transition}
+          imageNumber={3}
+          image={image3}
+        />
       ) : (
         ""
       )}
