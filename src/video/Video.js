@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import video from "./Big_Buck_Bunny_1080_10s_5MB.mp4";
 import { connect } from "react-redux";
 import ReactPlayer from "react-player";
 
-function Video({setPlaying, stopPlaying, showImageOne, showImageTwo, showImageThree}) {
+function Video({setPlaying, stopPlaying, setCurrentTimeVideo}) {
+
+
+  let fullScreenREg = useRef(null)
  
   const handelProgress = (element) =>{
       const time = element.nativeEvent.path[0].currentTime
-      showImageOne(time)
+      setCurrentTimeVideo(time)
 
   }
+
+  
 
   return (
     <>
@@ -28,7 +33,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     setPlaying: () => dispatch({ type: "VIDEO_PLAY"}),
     stopPlaying: () => dispatch({ type: "VIDEO_STOP"}),
-    showImageOne: (currentState) => dispatch({ type: "VIDEO_TIMESTAMP", payload: {currentState}}),
+    setCurrentTimeVideo: (currentState) => dispatch({ type: "VIDEO_TIMESTAMP", payload: {currentState}}),
   };
 };
 
