@@ -5,13 +5,22 @@
   bottom: 0;
   height: 840px;
   padding: 7px;
-  background: #8a2be2;
-  border: 3px solid;
+
+  border: 1px solid;
   position: relative;
+}
+
+.background_on{
+  background: #8a2be2;
+}
+
+.background_off{
+  background: wheat;
 }
 
 .image_1{
 position: absolute ;
+
 }
 
 .image_2{
@@ -49,7 +58,9 @@ video{
   right: 45%;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {
+  background-color: #3e8e41;
+}
 
 .button:active {
   background-color: #3e8e41;

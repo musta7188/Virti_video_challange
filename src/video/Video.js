@@ -23,7 +23,8 @@ function Video({setPlaying, stopPlaying, setCurrentTimeVideo}) {
         controls
               onPlay={() => setPlaying()}
               onEnded={() => stopPlaying()}
-              onTimeUpdate={handelProgress}      
+              onTimeUpdate={handelProgress}  
+              
           />
     </FullScreen>
      
