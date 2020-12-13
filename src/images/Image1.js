@@ -1,9 +1,26 @@
 import React from "react";
 import image1 from "./image1.png";
 import { connect } from "react-redux";
+import { motion } from "framer-motion"
 
 function Image1({ timeVideoPlayed, videoPlay, VideoTime }) {
+
+
+  const bounceTransition = {
+    y: {
+      duration: 1,
+      yoyo: Infinity,
+      ease: "easeIn"
+    }
+  }
+
+
   return (
+    <motion.div 
+    transition={bounceTransition}
+    animate={{
+      y:["0em", "12.8em"]
+    }} >
     <div className="image_1">
       {timeVideoPlayed < 2 &&
         videoPlay &&
@@ -14,6 +31,7 @@ function Image1({ timeVideoPlayed, videoPlay, VideoTime }) {
         ""
       )}
     </div>
+    </motion.div>
   );
 }
 
