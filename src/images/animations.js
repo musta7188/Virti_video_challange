@@ -34,3 +34,15 @@ export const transitionImage3 = {
   loop: Infinity,
   repeatDelay: 1,
 };
+
+export const animationWelcome = {
+  scale: [1, 2, 2, 1],
+  rotate: [0, 100, 10, 0, 0],
+  borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+};
+export const transitionWelcome = {
+  duration: 2,
+  times: [0, 0.4, 0.5, 0.8, 1],
+  loop: false,
+  repeatDelay: 1,
+};

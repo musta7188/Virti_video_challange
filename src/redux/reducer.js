@@ -1,10 +1,18 @@
 const initialState = {
+  user: null,
   timeVideoPlayed: 0,
   videoPlay: false,
   VideoTime: 0,
 };
 
 const appReducer = (state = initialState, action) => {
+  if (action.type === "SET_USER") {
+    return {
+       ...state, 
+       user: action.payload.user 
+      };
+  }
+
   if (action.type === "VIDEO_PLAY") {
     return {
       ...state,
