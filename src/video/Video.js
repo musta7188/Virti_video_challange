@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import video from "./Big_Buck_Bunny_1080_10s_5MB.mp4";
 import { connect } from "react-redux";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
@@ -30,10 +30,8 @@ function Video({ setPlaying, stopPlaying, setCurrentTimeVideo }) {
             onTimeUpdate={handelProgress}
           />
         </animated.div>
-
       </FullScreen>
       <button onClick={handle.enter} className="button">
-        {" "}
         Fullscreen mode
       </button>
     </>

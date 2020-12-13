@@ -1,4 +1,4 @@
-import "./App.css";
+import './App.css'
 import React from "react";
 import Video from "./video/Video";
 import { connect } from "react-redux";

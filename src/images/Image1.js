@@ -2,10 +2,8 @@ import React from "react";
 import image1 from "./image1.png";
 import { connect } from "react-redux";
 import RenderImage from "./RenderImage";
-import {transitionImage1,animationImage1} from './animations'
+import { transitionImage1, animationImage1 } from "./animations";
 function Image1({ timeVideoPlayed, videoPlay, VideoTime }) {
-
-
   return (
     <>
       {timeVideoPlayed < 2 &&
@@ -17,6 +15,7 @@ function Image1({ timeVideoPlayed, videoPlay, VideoTime }) {
           transition={transitionImage1}
           imageNumber={1}
           image={image1}
+          alt={" image of a banana"}
         />
       ) : (
         ""

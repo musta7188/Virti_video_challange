@@ -1,4 +1,3 @@
-
 export const transitionImage1 = {
   y: {
     duration: 1,
@@ -6,11 +5,9 @@ export const transitionImage1 = {
     ease: "easeIn",
   },
 };
- export const animationImage1 = {
+export const animationImage1 = {
   y: ["0em", "30em"],
 };
-
-
 
 export const animationImage2 = {
   scale: [1, 2, 2, 1],

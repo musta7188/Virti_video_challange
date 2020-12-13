@@ -11,17 +11,13 @@
 
 .background_on {
   background-color: #cccccc;
-  background-image: linear-gradient(red, yellow, blue);
+  background-image: linear-gradient(#00ffac, #ffc107, blue);
 }
-
 
 .background_off {
   background-color: #cccccc;
   background-image: linear-gradient(red, yellow, blue);
-
 }
-
-
 
 .image_1 {
   position: absolute;
