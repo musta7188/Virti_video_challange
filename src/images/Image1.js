@@ -1,37 +1,34 @@
 import React from "react";
 import image1 from "./image1.png";
 import { connect } from "react-redux";
-import { motion } from "framer-motion"
-
+import { motion } from "framer-motion";
+import RenderImage from './RenderImage'
 function Image1({ timeVideoPlayed, videoPlay, VideoTime }) {
-
-
-  const bounceTransition = {
+  const transition = {
     y: {
       duration: 1,
       yoyo: Infinity,
-      ease: "easeIn"
-    }
-  }
-
+      ease: "easeIn",
+    },
+  };
+  const animation = {
+    y: ["0em", "30em"],
+  };
 
   return (
-    <motion.div 
-    transition={bounceTransition}
-    animate={{
-      y:["0em", "30em"]
-    }} >
-    <div className="image_1">
+    <>
       {timeVideoPlayed < 2 &&
-        videoPlay &&
-        VideoTime >= 3.5 &&
-        VideoTime <= 8.5 ? (
-        <img src={image1} />
+      videoPlay &&
+      VideoTime >= 3.5 &&
+      VideoTime <= 8.5 ? (
+        <RenderImage animation={animation} transition={transition}
+        imageNumber={1} image={image1}
+        
+        />
       ) : (
         ""
       )}
-    </div>
-    </motion.div>
+    </>
   );
 }
 
