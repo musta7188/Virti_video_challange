@@ -19,7 +19,7 @@ function Image1({ timeVideoPlayed, videoPlay, VideoTime }) {
     <motion.div 
     transition={bounceTransition}
     animate={{
-      y:["0em", "12.8em"]
+      y:["0em", "30em"]
     }} >
     <div className="image_1">
       {timeVideoPlayed < 2 &&

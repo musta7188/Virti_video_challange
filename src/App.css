@@ -5,37 +5,36 @@
   bottom: 0;
   height: 840px;
   padding: 7px;
-
   border: 1px solid;
   position: relative;
 }
 
-.background_on{
+.background_on {
   background: #8a2be2;
-}
-
-.background_off{
-  background: wheat;
-}
-
-.image_1{
-position: absolute ;
-
-}
-
-.image_2{
-  position: absolute;
-  right: 0;
   
 }
 
-.image_3{
-  position: absolute;
-  left: 45%;
-  z-index: 1;
+.background_off {
+  background: wheat;
 }
 
-video{
+
+
+.image_1 {
+  position: absolute;
+}
+
+.image_2 {
+  position: absolute;
+  right: 0;
+}
+
+.image_3 {
+  position: absolute;
+  left: 45%;
+}
+
+video {
   position: absolute;
   width: 50%;
   height: 50%;
@@ -51,32 +50,54 @@ video{
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
   top: 85%;
   right: 45%;
-
+  transform: translateY(50px);
+  transition: all 0.4s ease-in-out;
 }
 
 .button:hover {
   background-color: #3e8e41;
+  margin-bottom: 20px;
+  transform: translateY(0px);
 }
 
 .button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: translateY(100px);
 }
 
+/* mobile version */
+
 @media only screen and (max-width: 375px) {
-  video{
+  video {
     position: absolute;
     width: 70%;
     height: 20%;
     top: 20%;
     right: 15%;
+  }
+
+  .image_1 > img {
+    position: absolute;
+    width: 50px;
+  }
+
+  .image_2 > img {
+    position: absolute;
+    right: 0;
+    width: 50px;
+  }
+
+  .image_3 > img {
+    position: absolute;
+    left: 45%;
+    width: 50px;
   }
 
   .button {
@@ -87,13 +108,24 @@ video{
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #4caf50;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
     top: 45%;
     right: 28%;
+    transform: translateY(50px);
+    transition: all 0.4s ease-in-out;
   }
-  
-  
+
+  .button:hover {
+    background-color: #3e8e41;
+    margin-bottom: 20px;
+    transform: translateY(0px);
+  }
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(100px);
+  }
 }

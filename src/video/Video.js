@@ -3,6 +3,7 @@ import video from "./Big_Buck_Bunny_1080_10s_5MB.mp4";
 import { connect } from "react-redux";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { useSpring, animated } from "react-spring";
+
 function Video({ setPlaying, stopPlaying, setCurrentTimeVideo }) {
   ////animation with transition opacity
   const props = useSpring({
@@ -29,13 +30,12 @@ function Video({ setPlaying, stopPlaying, setCurrentTimeVideo }) {
             onTimeUpdate={handelProgress}
           />
         </animated.div>
-        <button onClick={handle.enter} className="button">
+
+      </FullScreen>
+      <button onClick={handle.enter} className="button">
         {" "}
         Fullscreen mode
       </button>
-      </FullScreen>
-
-     
     </>
   );
 }
