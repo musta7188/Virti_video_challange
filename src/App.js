@@ -5,10 +5,24 @@ import { connect } from "react-redux";
 import Image1 from './images/Image1'
 import Image2 from "./images/Image2";
 import Image3 from "./images/Image3";
+import { motion } from "framer-motion"
+import {useSpring, animated} from 'react-spring'
 
 
 function App({videoPlay}) {
-const [backGround, setBackground] = useState("off")
+  const props = useSpring({
+    from: {opacity: 0},
+    to: {opacity: 1 },
+  
+  })
+
+  const bounceTransition = {
+    y: {
+      duration: 1,
+      yoyo: Infinity,
+      ease: "easeIn"
+    }
+  }
 
   return (
     <>
@@ -16,8 +30,21 @@ const [backGround, setBackground] = useState("off")
 
         <Image3/>
         <Image2/>
+        <motion.div 
+        transition={bounceTransition}
+        animate={{
+          y:["0em", "12.8em"]
+        }}
+        >
         <Image1/> 
-        <Video setBackground={setBackground}/>
+        </motion.div>
+       
+
+
+        <animated.div style={props}><Video /></animated.div>
+        
+
+     
       </div>
       </>
   );
