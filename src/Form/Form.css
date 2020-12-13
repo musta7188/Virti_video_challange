@@ -10,7 +10,7 @@
 }
 
 .form--container input {
-  width: 100%;
+  width: 75%;
   padding: 12px 10px;
   margin: 8px 0;
   border: 1px solid #ccc;
@@ -25,4 +25,8 @@
   cursor: pointer;
   border-radius: 4px;
   cursor: pointer;
+}
+
+h1{
+  color: rgb(27, 40, 156);
 }

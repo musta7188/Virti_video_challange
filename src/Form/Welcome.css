@@ -1,0 +1,40 @@
+.welcome{
+padding: 7px;
+border: 1px solid;
+}
+
+.welcome_button{
+
+    background-color: #6a4caf; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+.swap_off {
+  background-color: #cccccc;
+  background-image: linear-gradient(#00ffac, #ffc107, blue);
+}
+
+.swap_on {
+  background-color: #cccccc;
+  background-image: linear-gradient(red, yellow, blue);
+}
+
+.welcome_button {
+  transition-duration: 0.4s;
+  border-radius: 15px
+}
+
+.welcome_button:hover {
+  background-color: #1714b9; /* Green */
+  color: white;
+}

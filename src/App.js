@@ -17,6 +17,7 @@ function App({ videoPlay, user }) {
   } else {
     return (
       <>
+               <Welcome/>
         <div
           className={
             ///if the video is playing color background will change
@@ -25,7 +26,6 @@ function App({ videoPlay, user }) {
               : `main_container background_off`
           }
         >
-          <Welcome/>
           <Image3 />
           <Image2 />
           <Image1 />

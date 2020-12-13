@@ -37,7 +37,7 @@ export const transitionImage3 = {
 
 export const animationWelcome = {
   scale: [1, 2, 2, 1],
-  rotate: [0, 100, 10, 0, 0],
+  rotate: [1000, 0, 0, 0, 0],
   borderRadius: ["20%", "20%", "50%", "50%", "20%"],
 };
 export const transitionWelcome = {

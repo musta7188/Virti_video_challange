@@ -13,7 +13,7 @@ export function Form({ setUserName }) {
     <div data-testid="form" className="form--container">
       <form onSubmit={(e) => handelSubmit(e)}>
         <label>
-          <h1>Player name</h1>
+          <h1>Insert your name to start</h1>
           <input
             variant="outlined"
             margin="normal"
