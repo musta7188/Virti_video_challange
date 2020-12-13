@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import image2 from "./image2.png";
-import { motion } from "framer-motion";
-
+import RenderImage from "./RenderImage";
 function Image2({ timeVideoPlayed, videoPlay, VideoTime }) {
   const animation = {
     scale: [1, 2, 2, 1],
@@ -22,11 +21,12 @@ function Image2({ timeVideoPlayed, videoPlay, VideoTime }) {
       videoPlay &&
       VideoTime >= 6.0 &&
       VideoTime <= 8.0 ? (
-        <motion.div animate={animation} transition={transition}>
-          <div className="image_2">
-            <img src={image2} />
-          </div>
-        </motion.div>
+        <RenderImage
+        animation={animation}
+        transition={transition}
+        imageNumber={2}
+        image={image2}
+      />
       ) : (
         ""
       )}

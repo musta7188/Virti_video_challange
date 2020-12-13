@@ -2,6 +2,7 @@ import React from "react";
 import image3 from "./image3.png";
 import { connect } from "react-redux";
 import { motion } from "framer-motion";
+import RenderImage from "./RenderImage";
 function Image3({ timeVideoPlayed, videoPlay, VideoTime }) {
   const animation = {
     scale: [1, 2, 2, 1, 1],
@@ -21,11 +22,12 @@ function Image3({ timeVideoPlayed, videoPlay, VideoTime }) {
       videoPlay &&
       VideoTime >= 7.0 &&
       VideoTime <= 8.5 ? (
-        <motion.div animate={animation} transition={transition}>
-          <div className="image_3">
-            <img src={image3} />
-          </div>
-        </motion.div>
+        <RenderImage
+        animation={animation}
+        transition={transition}
+        imageNumber={3}
+        image={image3}
+      />
       ) : (
         ""
       )}
