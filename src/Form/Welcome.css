@@ -38,3 +38,35 @@ border: 1px solid;
   background-color: #1714b9; /* Green */
   color: white;
 }
+
+@media only screen and (max-width: 375px) {
+
+  .welcome{
+    padding: 7px;
+    border: 1px solid;
+    height: 130px;
+    }
+    
+    .welcome_button{
+    
+        background-color: #6a4caf; /* Green */
+        border: none;
+        color: white;
+        padding: 9px 19px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    
+    }
+
+    .welcome > h1{
+      font-size: 20px;
+    }
+
+
+
+}
