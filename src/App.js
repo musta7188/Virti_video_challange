@@ -6,14 +6,12 @@ import Image1 from "./images/Image1";
 import Image2 from "./images/Image2";
 import Image3 from "./images/Image3";
 
-
 function App({ videoPlay }) {
-  
-
   return (
     <>
       <div
         className={
+          ///if the video is playing color background will change
           videoPlay
             ? `main_container background_on`
             : `main_container background_off`
@@ -22,8 +20,7 @@ function App({ videoPlay }) {
         <Image3 />
         <Image2 />
         <Image1 />
-          <Video />
-     
+        <Video />
       </div>
     </>
   );
