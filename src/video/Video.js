@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef} from "react";
 import video from "./Big_Buck_Bunny_1080_10s_5MB.mp4";
 import { connect } from "react-redux";
-import ReactPlayer from "react-player";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 function Video({setPlaying, stopPlaying, setCurrentTimeVideo}) {
 
 
-  let fullScreenREg = useRef(null)
+  const handle = useFullScreenHandle();
  
   const handelProgress = (element) =>{
       const time = element.nativeEvent.path[0].currentTime
@@ -18,13 +18,17 @@ function Video({setPlaying, stopPlaying, setCurrentTimeVideo}) {
 
   return (
     <>
+    <FullScreen handle={handle}>
       <video src={video}
         controls
               onPlay={() => setPlaying()}
               onEnded={() => stopPlaying()}
               onTimeUpdate={handelProgress}      
           />
-      <button className="button"> Fullscreen mode</button>
+    </FullScreen>
+     
+          <button onClick={handle.enter} className="button"> Fullscreen mode</button>
+
       </>
   );
 }
