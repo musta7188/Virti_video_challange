@@ -7,12 +7,30 @@
   padding: 7px;
   border: 1px solid;
   position: relative;
+ 
 }
 
 .background_on {
-  background-color: #cccccc;
-  background-image: linear-gradient(#00ffac, #ffc107, blue);
+  animation-name: background_change;
+  animation-duration: 10s;
 }
+
+
+@keyframes background_change{
+  0% {background-color: #cccccc;
+    background-image: linear-gradient(#00ffac, #ffc107, blue);}
+  25% {background-color: #cccccc;
+    background-image: linear-gradient(red, yellow, blue);}
+    50% {background-color: #cccccc;
+      background-image: linear-gradient(rgb(229, 255, 0), rgb(214, 214, 189), rgb(192, 25, 170));}
+
+      80% {background-color: #cccccc;
+        background-image: linear-gradient(rgb(255, 0, 43), rgb(189, 214, 193), rgb(25, 28, 192));}
+        100% {background-color: #cccccc;
+          background-image: linear-gradient(rgb(255, 251, 0), rgb(22, 180, 49), rgb(82, 145, 85));}
+}
+
+
 
 .background_off {
   background-color: #cccccc;
@@ -39,10 +57,11 @@
 video {
   position: absolute;
   width: 50%;
-  height: 60%;
   top: 25%;
   right: 25%;
 }
+
+$randomNumber
 
 .button {
   position: absolute;
@@ -65,13 +84,13 @@ video {
 .button:hover {
   background-color: #3e8e41;
   margin-bottom: 20px;
-  transform: translateY(0px);
+  transform: translateX(-800px);
 }
 
 .button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
-  transform: translateY(100px);
+  transform: translateX(100px);
 }
 
 /* mobile version */
@@ -95,7 +114,6 @@ video {
   video {
     position: absolute;
     width: 70%;
-    height: 30%;
     top: 20%;
     right: 15%;
   }
