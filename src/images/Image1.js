@@ -6,7 +6,7 @@ import { transitionImage1, animationImage1 } from "./animations";
 function Image1({ timeVideoPlayed, videoPlay, VideoTime }) {
   return (
     <>
-      {timeVideoPlayed < 2 &&
+      {timeVideoPlayed < 1 &&
       videoPlay &&
       VideoTime >= 3.5 &&
       VideoTime <= 8.5 ? (

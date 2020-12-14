@@ -7,7 +7,7 @@ import RenderImage from "./RenderImage";
 function Image3({ timeVideoPlayed, videoPlay, VideoTime }) {
   return (
     <>
-      {timeVideoPlayed < 4 &&
+      {timeVideoPlayed < 3 &&
       videoPlay &&
       VideoTime >= 7.0 &&
       VideoTime <= 8.5 ? (

@@ -51,12 +51,8 @@
 }
 
 .background_off {
-  background-color: #cccccc;
-  background-image: linear-gradient(
-    rgb(76, 161, 43),
-    rgb(37, 153, 33),
-    rgb(25, 119, 46)
-  );
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red , yellow);
 }
 
 .image_1 {
@@ -95,7 +91,7 @@ video {
   background-image: linear-gradient(#00ffac, #ffc107, blue);
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 3px rgb(45, 145, 50);
   color: darkblue;
   top: 90%;
   right: 43%;
@@ -181,4 +177,12 @@ video {
     box-shadow: 0 5px #666;
     transform: translateY(100px);
   }
+
+  
+
+
+
+
+
+
 }

@@ -11,7 +11,8 @@ const appReducer = (state = initialState, action) => {
        ...state, 
        user: action.payload.user,
        timeVideoPlayed: state.timeVideoPlayed = 0,
-       VideoTime: state.VideoTime = 0
+       VideoTime: state.VideoTime = 0,
+       videoPlay: state.videoPlay = false,
       };
   }
 
@@ -19,7 +20,6 @@ const appReducer = (state = initialState, action) => {
     return {
       ...state,
       videoPlay: true,
-      timeVideoPlayed: state.timeVideoPlayed + 1, ///when the video plays keep track of how many times you played the video
     };
   }
 
@@ -27,6 +27,7 @@ const appReducer = (state = initialState, action) => {
     return {
       ...state,
       videoPlay: false,
+      timeVideoPlayed: state.timeVideoPlayed + 1, ///when the video plays keep track of how many times you played the video
     };
   }
 
