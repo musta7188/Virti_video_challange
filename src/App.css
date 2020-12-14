@@ -3,11 +3,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 650px;
+  height: 750px;
   padding: 7px;
   border: 1px solid;
   position: relative;
- 
 }
 
 .background_on {
@@ -15,26 +14,49 @@
   animation-duration: 10s;
 }
 
+@keyframes background_change {
+  0% {
+    background-color: #cccccc;
+    background-image: linear-gradient(#00ffac, #ffc107, blue);
+  }
+  25% {
+    background-color: #cccccc;
+    background-image: linear-gradient(red, yellow, blue);
+  }
+  50% {
+    background-color: #cccccc;
+    background-image: linear-gradient(
+      rgb(229, 255, 0),
+      rgb(214, 214, 189),
+      rgb(192, 25, 170)
+    );
+  }
 
-@keyframes background_change{
-  0% {background-color: #cccccc;
-    background-image: linear-gradient(#00ffac, #ffc107, blue);}
-  25% {background-color: #cccccc;
-    background-image: linear-gradient(red, yellow, blue);}
-    50% {background-color: #cccccc;
-      background-image: linear-gradient(rgb(229, 255, 0), rgb(214, 214, 189), rgb(192, 25, 170));}
-
-      80% {background-color: #cccccc;
-        background-image: linear-gradient(rgb(255, 0, 43), rgb(189, 214, 193), rgb(25, 28, 192));}
-        100% {background-color: #cccccc;
-          background-image: linear-gradient(rgb(255, 251, 0), rgb(22, 180, 49), rgb(82, 145, 85));}
+  80% {
+    background-color: #cccccc;
+    background-image: linear-gradient(
+      rgb(255, 0, 43),
+      rgb(189, 214, 193),
+      rgb(25, 28, 192)
+    );
+  }
+  100% {
+    background-color: #cccccc;
+    background-image: linear-gradient(
+      rgb(255, 251, 0),
+      rgb(22, 180, 49),
+      rgb(82, 145, 85)
+    );
+  }
 }
-
-
 
 .background_off {
   background-color: #cccccc;
-  background-image: linear-gradient(red, yellow, blue);
+  background-image: linear-gradient(
+    rgb(76, 161, 43),
+    rgb(37, 153, 33),
+    rgb(25, 119, 46)
+  );
 }
 
 .image_1 {
@@ -61,8 +83,6 @@ video {
   right: 25%;
 }
 
-$randomNumber
-
 .button {
   position: absolute;
   padding: 15px 25px;
@@ -71,13 +91,14 @@ $randomNumber
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #4caf50;
+  background-color: #cccccc;
+  background-image: linear-gradient(#00ffac, #ffc107, blue);
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  top: 80%;
+  color: darkblue;
+  top: 90%;
   right: 43%;
-  transform: translateY(50px);
   transition: all 0.4s ease-in-out;
 }
 
@@ -96,7 +117,6 @@ $randomNumber
 /* mobile version */
 
 @media only screen and (max-width: 375px) {
-
   .main_container {
     top: 0;
     left: 0;
@@ -107,9 +127,6 @@ $randomNumber
     border: 1px solid;
     position: relative;
   }
-
-
-
 
   video {
     position: absolute;
@@ -147,16 +164,17 @@ $randomNumber
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-    top: 45%;
+    top: 60%;
     right: 28%;
-    transform: translateY(50px);
     transition: all 0.4s ease-in-out;
+    color: rgb(9, 37, 114);
+    font-weight: bold;
   }
 
   .button:hover {
     background-color: #3e8e41;
     margin-bottom: 20px;
-    transform: translateY(0px);
+    transform: translateX(10px);
   }
   .button:active {
     background-color: #3e8e41;
