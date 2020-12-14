@@ -6,7 +6,7 @@ import Image1 from "./images/Image1";
 import Image2 from "./images/Image2";
 import Image3 from "./images/Image3";
 import Form from "./Form/Form";
-import Welcome from './Form/Welcome'
+import Welcome from "./Form/Welcome";
 function App({ videoPlay, user }) {
   if (!user) {
     return (
@@ -17,7 +17,7 @@ function App({ videoPlay, user }) {
   } else {
     return (
       <>
-               <Welcome/>
+        <Welcome />
         <div
           className={
             ///if the video is playing color background will change
@@ -39,7 +39,7 @@ function App({ videoPlay, user }) {
 const mapStateToProps = (state) => {
   return {
     videoPlay: state.videoPlay,
-    user: state.user
+    user: state.user,
   };
 };
 

@@ -11,8 +11,6 @@
   animation-duration: 10s;
 }
 
-
-
 .form--container input {
   width: 75%;
   padding: 12px 10px;
@@ -31,6 +29,6 @@
   cursor: pointer;
 }
 
-h1{
+h1 {
   color: rgb(27, 40, 156);
 }
